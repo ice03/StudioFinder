@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<device id="retina4_7" orientation="portrait">
+<adaptation id="fullscreen"/>
+</device>
+<dependencies>
+<deployment identifier="iOS"/>
+<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+<capability name="Safe area layout guides" minToolsVersion="9.0"/>
+<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+</dependencies>
+<scenes>
+<!--HomeVC-->
+<scene sceneID="tne-QT-ifu">
+<objects>
+<viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+<subviews>
+<mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-aY-sot">
+<rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+</mapView>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ybx-KT-wQJ" customClass="GradientView" customModule="MusicApp" customModuleProvider="target">
+<rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+<constraints>
+<constraint firstAttribute="height" constant="70" id="lPv-JI-1B7"/>
+</constraints>
+</view>
+<view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COC-rt-f40" customClass="RoundedShadowView" customModule="MusicApp" customModuleProvider="target">
+<rect key="frame" x="20" y="40" width="335" height="35"/>
+<subviews>
+<textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a Place and press return" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6a-vI-5Ix">
+<rect key="frame" x="20" y="5" width="295" height="25"/>
+<nil key="textColor"/>
+<fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+<textInputTraits key="textInputTraits"/>
+</textField>
+</subviews>
+<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+<constraints>
+<constraint firstAttribute="height" constant="35" id="5XA-0S-X0m"/>
+<constraint firstItem="W6a-vI-5Ix" firstAttribute="centerY" secondItem="COC-rt-f40" secondAttribute="centerY" id="AWN-24-Zei"/>
+<constraint firstItem="W6a-vI-5Ix" firstAttribute="leading" secondItem="COC-rt-f40" secondAttribute="leading" constant="20" id="b2A-r7-3Ou"/>
+<constraint firstAttribute="trailing" secondItem="W6a-vI-5Ix" secondAttribute="trailing" constant="20" id="vdd-Nr-bO5"/>
+</constraints>
+</view>
+</subviews>
+<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+<constraints>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="COC-rt-f40" secondAttribute="trailing" constant="20" id="9gF-um-QD7"/>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ybx-KT-wQJ" secondAttribute="trailing" id="Ds1-TK-g64"/>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X8Y-aY-sot" secondAttribute="bottom" id="EyE-sK-l5p"/>
+<constraint firstItem="COC-rt-f40" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RHb-bS-Qsm"/>
+<constraint firstItem="X8Y-aY-sot" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="T4c-08-WLI"/>
+<constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8Y-aY-sot" secondAttribute="trailing" id="U4F-o4-GS6"/>
+<constraint firstItem="Ybx-KT-wQJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zxp-LN-xJX"/>
+<constraint firstItem="COC-rt-f40" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="fRz-YY-7gV"/>
+<constraint firstItem="Ybx-KT-wQJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gbv-U6-cbP"/>
+<constraint firstItem="X8Y-aY-sot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xed-Ga-l8f"/>
+</constraints>
+<viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+</view>
+<connections>
+<outlet property="mapView" destination="X8Y-aY-sot" id="fWD-TN-e0s"/>
+<outlet property="navView" destination="Ybx-KT-wQJ" id="Khn-67-lkE"/>
+<outlet property="searchTxtField" destination="W6a-vI-5Ix" id="uHN-E1-SEZ"/>
+</connections>
+</viewController>
+<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+</objects>
+</scene>
+</scenes>
+</document>
